@@ -1,4 +1,4 @@
-var socket = io.connect();
+var socket = io.connect('http://mintsu1.nodester.com');
 console.log("aa");
 socket.on('connect',function(){
 	socket.on('a', function(data){
