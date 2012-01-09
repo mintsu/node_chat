@@ -1,11 +1,5 @@
 var socket = io.connect('http://mintsu1.nodester.com');
 
-socket.on('a',function(data){
-	console.log(data);		
-});
-
-console.log("aa");
-socket.on('connect',function(){
 	socket.on('a', function(data){
 		console.log("setsuzoku");
 		$('#count').text(data);
@@ -14,7 +8,6 @@ socket.on('connect',function(){
 		$('#chat').append('<p>' + escape(msg.name) + ':' + escape(msg.text) + '</p><hr />');
 		$('#chat').children('p:last').hide().fadeIn(5000);
 	});
-});
 
 function send()
 {
