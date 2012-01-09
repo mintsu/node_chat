@@ -2,11 +2,11 @@ h1= title
 p 現在の閲覧者数は
 	span#count
 	人です。
-hr
-#chat
 form#form(onsubmit='send(); return false;')
 	p 名前：
 		input#name(type='text')
 	p メッセージ：
 		input#text(type='text', autocomplete='off')
 	input(type='submit', value='送信')
+hr
+#chat

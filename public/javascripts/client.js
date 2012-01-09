@@ -5,8 +5,8 @@ socket.on('connect',function(){
 		$('#count').text(data);
 	});
 	socket.on('msg', function(msg){
-		$('#chat').append('<p>' + escape(msg.name) + ':' + escape(msg.text) + '</p><hr />');
-		$('#chat').children('p:last').hide().fadeIn(5000);
+		$('#chat').prepend('<p>' + escape(msg.name) + ':' + escape(msg.text) + '</p><hr />');
+		$('#chat').children('p:first').hide().fadeIn(5000);
 	});
 });
 
