@@ -41,7 +41,6 @@ var io = require('socket.io').listen(app);
 var count=0;
 io.sockets.on('connection', function(socket){
 	count++;
-	io.sockets.emit('message', {message: 100} );
 	io.sockets.emit('a', count);
 
 	socket.on('msg', function(msg){
