@@ -1,7 +1,6 @@
 var socket = io.connect();
 socket.on('connect',function(){
-	socket.on('a', function(data){
-		console.log("setsuzoku");
+	socket.on('count', function(data){
 		$('#count').text(data);
 	});
 	socket.on('msg', function(msg){
